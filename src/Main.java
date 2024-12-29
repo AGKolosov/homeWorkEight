@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Main {
@@ -11,8 +10,28 @@ public class Main {
         double[] massTwo = {1.57d, 7.654d, 9.986d};
         int[] massThree = {-3, -2, -1, 0, 1, 2, 3};
         System.out.println("Task 2");
-        System.out.println();
 
+        for (int i = 0; i < massOne.length; i++) {
+            System.out.print(massOne[i]);
+            if (i < massOne.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
+        for (int i = 0; i < massTwo.length; i++) {
+            System.out.print(massTwo[i]);
+            if (i < massTwo.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
+        for (int i = 0; i < massThree.length; i++) {
+            System.out.print(massThree[i]);
+            if (i < massThree.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
 
         System.out.println("Task 3");
         for (int i = massOne.length - 1; i >= 0; i--) {
@@ -36,7 +55,13 @@ public class Main {
             }
         }
         System.out.println();
-        System.out.println("Task ");
-        //System.out.println(Arrays.toString(massOne));
+        System.out.println("Task 4");
+        //int[] code = {1, 2, 3};
+        for (int i = 0; i < massOne.length; i++) {
+            if (massOne[i] % 2 != 0) {
+                massOne[i] = massOne[i] + 1;
+            }
+        }
+        System.out.print(Arrays.toString(massOne));
     }
 }
